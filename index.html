@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>College Club Enquiry Form</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo-group">
+        <img src="Logo.png" alt="New Logo" class="logo new-logo" />
+        <img src="ECS.png" alt="New Logo" class="logo new-logo" />
+        <img src="Head.png" alt="Centre of Excellence Logo" class="logo" />
+      </div>
+      <div class="header-text">
+        <h1>Centre of Excellence For Embedded System And AI IOT</h1>
+        <p>Initiative By ECS Department</p>
+      </div>
+    </div>
+  </header>
+
+ <section class="announcement-banner">
+  <p>
+  🎉 <strong>Ready to Master Embedded Systems?</strong><br>
+Join our 🔧 <strong>Hands-On STM32 Workshop</strong> by the <strong>Centre of Excellence</strong>!<br>
+💡 Code, ⚡ Connect, and 🚀 Bring microcontrollers to life—no prior experience needed!<br><br>
+
+📅 <strong>Registration:</strong> Aug 1–5, 2025 &nbsp;|&nbsp;
+📆 <strong>Workshop:</strong> Aug 6–8, 2025<br>
+🕒 <strong>Time:</strong> 3:15–5:00 PM &nbsp;|&nbsp;
+🏫 <strong>Venue:</strong> Lab 108/109, 1st Floor<br><br>
+
+📍 <strong>For General Queries:</strong> Vaibhav (Vice President), Aaryan (President)<br>
+📍 <strong>For Critical Queries:</strong> Mrs. Jalpaben Bhatt, (Faculty In-Charge COE)<br>
+✅ <em>Limited seats. Big ideas. Register now!</em>
+
+  </p>
+</section>
+
+
+  <form id="enquiryForm">
+    <div class="form-group">
+      <label>Full Name:</label>
+      <input type="text" id="fullName" required />
+    </div>
+
+    <div class="form-group">
+      <label>Roll Number:</label>
+      <input type="text" id="rollNo" required />
+    </div>
+
+    <div class="form-group">
+      <label>Branch:</label>
+      <select id="branch" required>
+        <option value="">Select Branch</option>
+        <option value="E&CS">E&CS</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>College Email ID:</label>
+      <input type="email" id="email" required />
+    </div>
+
+    <div class="form-group">
+      <label>Phone Number:</label>
+      <input type="tel" id="phone" maxlength="10" required />
+    </div>
+
+    <div class="form-group">
+      <label>Year of Study:</label>
+      <select id="year" required>
+        <option value="FE">FE</option>
+        <option value="SE">SE</option>
+        <option value="TE">TE</option>
+        <option value="BE">BE</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Division:</label>
+      <input type="text" id="division" required />
+    </div>
+
+    <div class="form-group">
+      <label>CGPA:</label>
+      <input type="number" step="0.01" id="cgpa" min="0" max="10" required />
+    </div>
+
+    <div class="form-group">
+      <label>Skillset:</label>
+      <textarea id="skills" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Why you want to attend:</label>
+      <textarea id="why_attend" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Questions for speaker:</label>
+      <textarea id="questions" rows="3"></textarea>
+    </div>
+
+    <!-- ✅ Mandatory Consent Checkbox -->
+    <div class="form-group">
+      <label class="checkbox-label"><span style="color: red">*</span> 
+        <input type="checkbox" id="consent" required />
+        I understand that once I register, I am expected to attend the workshop seriously and in case of absent the decision lies with the department.
+      </label>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="successMessage" style="display: none; text-align: center; margin-top: 20px;">
+    <h3>Your response has been recorded ✅</h3>
+    <button id="newResponseBtn">Submit another response</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+function doPost(e) {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Form Responses");
+  const data = JSON.parse(e.postData.contents);
+
+  sheet.appendRow([
+    new Date(),
+    data.fullName,
+    data.rollNo,
+    data.branch,
+    data.email,
+    data.phone,
+    data.year,
+    data.division,
+    data.cgpa,
+    data.skills,
+    data.why_attend,
+    data.questions
+  ]);
+
+  return ContentService.createTextOutput("Success").setMimeType(ContentService.MimeType.TEXT);
+}
